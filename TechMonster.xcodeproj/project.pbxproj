@@ -35,6 +35,8 @@
 		EF8A6D10246C2B9100039DE6 /* SE_charge.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EF8A6CF9246C2B9100039DE6 /* SE_charge.mp3 */; };
 		EF8A6D11246C2B9100039DE6 /* lobby.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EF8A6CFA246C2B9100039DE6 /* lobby.mp3 */; };
 		EF8A6D13246C2B9100039DE6 /* misaki_gothic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EF8A6CFD246C2B9100039DE6 /* misaki_gothic.ttf */; };
+		EFAFD32D246D266A0083F8AD /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAFD32C246D266A0083F8AD /* Character.swift */; };
+		EFAFD32F246D26810083F8AD /* TechMonManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAFD32E246D26810083F8AD /* TechMonManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +91,8 @@
 		EF8A6CF9246C2B9100039DE6 /* SE_charge.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = SE_charge.mp3; sourceTree = "<group>"; };
 		EF8A6CFA246C2B9100039DE6 /* lobby.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = lobby.mp3; sourceTree = "<group>"; };
 		EF8A6CFD246C2B9100039DE6 /* misaki_gothic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = misaki_gothic.ttf; sourceTree = "<group>"; };
+		EFAFD32C246D266A0083F8AD /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		EFAFD32E246D26810083F8AD /* TechMonManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechMonManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,8 +145,10 @@
 			children = (
 				EF8A6CE3246C2B9100039DE6 /* TechMon_Resource */,
 				EF8A6C53246BBAA200039DE6 /* AppDelegate.swift */,
+				EFAFD32E246D26810083F8AD /* TechMonManager.swift */,
 				EF8A6C55246BBAA200039DE6 /* SceneDelegate.swift */,
 				EF8A6C57246BBAA200039DE6 /* ViewController.swift */,
+				EFAFD32C246D266A0083F8AD /* Character.swift */,
 				EF8A6C59246BBAA200039DE6 /* Main.storyboard */,
 				EF8A6C5C246BBAA600039DE6 /* Assets.xcassets */,
 				EF8A6C5E246BBAA600039DE6 /* LaunchScreen.storyboard */,
@@ -201,7 +207,6 @@
 		EF8A6CEE246C2B9100039DE6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				EF8A6CF0246C2B9100039DE6 /* TechMonManager.swift */,
 				EF8A6CF1246C2B9100039DE6 /* Character.swift */,
 			);
 			path = Models;
@@ -224,6 +229,7 @@
 		EF8A6CFB246C2B9100039DE6 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				EF8A6CF0246C2B9100039DE6 /* TechMonManager.swift */,
 				EF8A6CFD246C2B9100039DE6 /* misaki_gothic.ttf */,
 			);
 			path = Fonts;
@@ -379,10 +385,12 @@
 				EF8A6D08246C2B9100039DE6 /* TechMonManager.swift in Sources */,
 				EF8A6CAF246BD91100039DE6 /* BattleViewController.swift in Sources */,
 				EF8A6D09246C2B9100039DE6 /* Character.swift in Sources */,
+				EFAFD32F246D26810083F8AD /* TechMonManager.swift in Sources */,
 				EF8A6C58246BBAA200039DE6 /* ViewController.swift in Sources */,
 				EF8A6C54246BBAA200039DE6 /* AppDelegate.swift in Sources */,
 				EF8A6C56246BBAA200039DE6 /* SceneDelegate.swift in Sources */,
 				EF8A6CAD246BD8BB00039DE6 /* LobbyViewController.swift in Sources */,
+				EFAFD32D246D266A0083F8AD /* Character.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
