@@ -30,6 +30,7 @@ class BattleViewController: UIViewController {
     var enemyMP = 0
     var player: Character!
     var enemy: Character!
+    
     var gameTimer: Timer!
     var isPlayerAttackAvailable: Bool = true
 
@@ -43,9 +44,13 @@ class BattleViewController: UIViewController {
    //プレイヤーのステータスを反映
         playerNameLabel.text = "勇者"
         playerImageView.image = UIImage(named: "yusya.png")
+        playerHPLabel.text = "\(playerHP) / 100"
+        playerMPLabel.text = "\(playerMP) / 20"
   //敵のステータスを反映
         enemyNameLabel.text = "籠"
         enemyImageView.image = UIImage(named: "monster.png")
+        enemyHPLabel.text = "\(enemyHP) / 200"
+        enemyMPLabel.text = "\(enemyMP) / 35"
         
   //ゲームスタート
         gameTimer = Timer.scheduledTimer(timeInterval: 0.1, target: self,
@@ -79,7 +84,7 @@ class BattleViewController: UIViewController {
         
         //プレイヤーのステータスを更新
         playerMP += 1
-        if enemyMP >= 20{
+        if playerMP >= 20{
             
             isPlayerAttackAvailable = true
             playerMP = 20
@@ -117,10 +122,10 @@ class BattleViewController: UIViewController {
     }
     //勝敗判定する
     func judgeBattle(){
-        if player.currentHP <= 0{
+        if player.currentHP <= 0 {
             
             finishBattle(vanishImageView: playerImageView, isPlayerWin: false)
-        }else if enemy.currentHP <= 0{
+        }else if enemy.currentHP <= 0 {
             finishBattle(vanishImageView: enemyImageView, isPlayerWin: true)
         }
         
@@ -160,14 +165,13 @@ class BattleViewController: UIViewController {
         techMonManager.damageAnimation(imageView: enemyImageView)
         techMonManager.playSE(fileName: "SE_attack")
         
-            player.currentTP  += 10
+            enemy.currentHP -= player.attackPoint
+            player.currentTP += 10
             if player.currentTP >= player.maxTP{
                 player.currentTP = player.maxTP
             }
-        
             player.currentMP = 0
-            
-           judgeBattle()
+            judgeBattle()
         }
       }
     
