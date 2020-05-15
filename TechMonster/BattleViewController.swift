@@ -126,6 +126,7 @@ class BattleViewController: UIViewController {
             
             finishBattle(vanishImageView: playerImageView, isPlayerWin: false)
         }else if enemy.currentHP <= 0 {
+            
             finishBattle(vanishImageView: enemyImageView, isPlayerWin: true)
         }
         
@@ -165,22 +166,25 @@ class BattleViewController: UIViewController {
         techMonManager.damageAnimation(imageView: enemyImageView)
         techMonManager.playSE(fileName: "SE_attack")
         
-            enemy.currentHP -= player.attackPoint
-            player.currentTP += 10
-            if player.currentTP >= player.maxTP{
-                player.currentTP = player.maxTP
+           enemyHP -= 30
+            playerMP = 0
+            enemyHPLabel.text = "\(enemyHP)/ 200"
+            playerMPLabel.text = "\(playerMP) / 20"
+            
+            if enemyHP <= 0 {
+                finishBattle(vanishImageView: enemyImageView, isPlayerWin: true)
             }
-            player.currentMP = 0
-            judgeBattle()
         }
       }
     
     @IBAction func tameruAction(){
         
         if isPlayerAttackAvailable{
+            
             techMonManager.playSE(fileName: "SE_charge")
             player.currentTP += 40
             if player.currentTP >= player.maxTP{
+                
                player.currentTP = player.maxTP
             }
             player.currentMP = 0
@@ -192,8 +196,10 @@ class BattleViewController: UIViewController {
             
             techMonManager.damageAnimation(imageView: enemyImageView)
             techMonManager.playSE(fileName: "SE_fire")
+            
             enemy.currentHP -= 100
             player.currentTP -= 40
+            
             if player.currentTP <= 0{
                 player.currentTP = 0
             }
@@ -201,8 +207,6 @@ class BattleViewController: UIViewController {
             judgeBattle()
           }
          }
-    
-    
     
     }
 

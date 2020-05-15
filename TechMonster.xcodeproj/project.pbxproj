@@ -192,8 +192,8 @@
 				EFAFD333246D2D060083F8AD /* lobby.png */,
 				EFAFD334246D2D060083F8AD /* battlebg.png */,
 				EFAFD335246D2D060083F8AD /* bgimage.jpg */,
-				EFAFD337246D2D060083F8AD /* waku.png */,
 				EFAFD338246D2D060083F8AD /* gold_button.png */,
+				EFAFD337246D2D060083F8AD /* waku.png */,
 				EFAFD339246D2D060083F8AD /* yusya.png */,
 				EFAFD33A246D2D060083F8AD /* monster.png */,
 			);
